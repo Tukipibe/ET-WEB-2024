@@ -1,119 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-* {
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
+.texto-banner{
+    color: white !important;
 }
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+#segvis{
+    background-image: url(vis2.jpg);
+    height: 91vh;
+    color: white;
 }
-
-#banner {
-    background-image: url('banner.png');
-    height: 70vh;
+#tervis{
+    background-image: url(vis3.jpg);
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    animation-name: derecha;
-    animation-duration: 1s;
+    height: 91vh;
+    color: white;
 }
-
-@keyframes derecha {
-    0%{
-        transform: translateX(400px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
+#cuavis{
+    background-image: url(vis4.jpg);
+    background-size: cover;
+    height: 91vh;
+    color: white;
 }
-
-#arriba {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 10vh;
-    animation-name: bajar;
-    animation-duration: 1s;
-}
-
-@keyframes bajar {
-    0%{
-        transform: translateY(-100px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-nav {
-    display: flex;
-    column-gap: 25px;
-}
-
-nav>a {
-    color: #252525;
-    text-decoration: none;
-}
-
-#banner>h1 {
-    color: #FCBE4D;
-    font-size: 3.5rem;
-    margin-left: 10vw;
-}
-
-#boton {
-    margin-left: 10vw;
-    color: #FFFFFF;
-    background-color: #FCBE4D;
-    width: fit-content;
-    padding: 10px 25px;
-    border-radius: 20px;
-    margin-top: 40px;
-}
-
-#about {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #F8F4E9;
-    row-gap: 25px;
-    background-image: url('perro_jugando.png');
-    background-repeat: no-repeat;
-    background-size: 300px;
-    background-position: 8% center;
-}
-
-#about>h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: #4C301B;
-}
-
-.linea {
-    width: 80px;
-    height: 4px;
-    background-color: #FCBE4D;
-}
-
-#about>p {
-    width: 35%;
-    text-align: center;
-    font-size: .9rem;
-    color: #272727;
-}
-
-button {
-    background-color: transparent;
-    border: 2px #FCBE4D solid;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: bold;
-    color: #4C301B;
+#quivis{
+    background-image: url(vis5.png);
+    background-size: cover;
+    height: 91vh;
+    color: white;
 }
