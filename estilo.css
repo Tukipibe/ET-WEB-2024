@@ -3,7 +3,7 @@
 }
 #segvis{
     background-image: url(vis2.jpg);
-    height: 91vh;
+    height: 112vh;
     color: white;
 }
 #tervis{
@@ -23,4 +23,11 @@
     background-size: cover;
     height: 91vh;
     color: white;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+}
+.card-img-top{
+    height: 70vh ;
 }
