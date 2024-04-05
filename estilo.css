@@ -1,25 +1,22 @@
-.texto-banner{
-    color: white !important;
-}
+
 #segvis{
-    background-image: url(vis2.jpg);
+    background-image: url(fondo.jpg);
     height: 112vh;
-    color: white;
 }
 #tervis{
-    background-image: url(vis3.jpg);
+    background-image: url(fondo.jpg);
     background-size: cover;
     height: 91vh;
     color: white;
 }
 #cuavis{
-    background-image: url(vis4.jpg);
+    background-image: url(fondo.jpg);
     background-size: cover;
     height: 91vh;
     color: white;
 }
 #quivis{
-    background-image: url(vis5.png);
+    background-image: url(fondo.jpg);
     background-size: cover;
     height: 91vh;
     color: white;
@@ -30,4 +27,23 @@
 }
 .card-img-top{
     height: 70vh ;
+}
+#text{
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    animation-name: neonEffect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-shadow: 2px 2px 0px #ff198f;
+}
+@keyframes neonEffect {
+    0%, 35%, 45%, 65%, 100% {
+        text-shadow: 
+        white 0 0 12px,
+        red 0 0 24px,
+        red 0 0 36px,
+    }
+    40%, 60%{
+        text-shadow: none;
+    }
 }

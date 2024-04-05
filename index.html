@@ -11,17 +11,17 @@
     <div id="navegador">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Le'Blanc</a>
+              <a class="navbar-brand" href="#carouselExampleCaptions">Le'Blanc</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#segvis">Mas vendidos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#tervis">3 </a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,7 +35,7 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#cuavis">Cuarta </a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -54,21 +54,21 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="hoja1.jpg" class="d-block w-100" alt="...">
+                <img src="fondo.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Libros</h5>
                   <p class="texto-banner">Un libro es una obra impresa, manuscrita o pintada en una serie de hojas de papel, pergamino, vitela u otro material, unidas por un lado (es decir, encuadernadas) y protegidas con tapas, también llamadas cubiertas. Un libro puede tratar sobre cualquier tema. Según la definición de la Unesco,1​ un libro debe poseer veinticinco hojas mínimo (49 páginas), pues de veinticuatro hojas o menos sería un folleto; y de una hasta cuatro páginas se consideran hojas sueltas (en una o dos hojas).</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="hoja2.jpg" class="d-block w-100" alt="...">
+                <img src="fondo.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>Some representative placeholder content for the second slide.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="hoja3.jpg" class="d-block w-100" alt="...">
+                <img src="fondo.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>Some representative placeholder content for the third slide.</p>
@@ -85,7 +85,9 @@
             </button>
           </div>
           <div id="segvis">
-            <h1>Mas vendidos</h1>
+            <div>
+            <h1  id="text">Top ventas</h1>
+          </div>
             <div class="row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <div class="card" style="width: 18rem;">
@@ -93,7 +95,26 @@
                   <div class="card-body">
                     <h5 class="card-title">Arsene Lupin</h5>
                     <p class="card-text">Arsenio Lupin, caballero ladrón es una colección de cuentos y la primera obra de una serie de novelas escritas por Maurice Leblanc acerca del personaje ficticio Arsenio Lupin.</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      Añadir al carro
+                    </button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Añadir al carrito</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Confirmar pedido
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Confirmar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                   </div>
@@ -103,7 +124,26 @@
                   <div class="card-body">
                     <h5 class="card-title">Sherlock Holmes</h5>
                     <p class="card-text">Las aventuras de Sherlock Holmes es una colección de doce cuentos escritos por Arthur Conan Doyle, en los que el personaje principal es el detective de ficción Sherlock Holmes.</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      Añadir al carro
+                    </button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Añadir al carrito</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Confirmar pedido
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Confirmar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
               </div>
             </div>
