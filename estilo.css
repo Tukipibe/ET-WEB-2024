@@ -1,8 +1,9 @@
-#navegador{
-    position: fixed;
+#navegador {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
-  /*width: 185vh;*/
-  width: 1423px;
 }
 
 #segvis{
@@ -15,24 +16,9 @@
     height: 91vh;
     color: white;
 }
-#cuavis{
-    background-image: url(fondo.jpg);
-    background-size: cover;
-    height: 91vh;
-    color: white;
-}
-#carrito{
-    background-image: url(fondo.jpg);
-    background-size: cover;
-    height: 91vh;
-    color: white;
-}
-.card{
-    display: flex;
-    flex-direction: row;
-}
+
 .card-img-top{
-    height: 70vh ;
+  height: 70vh;
 }
 #text{
     color: white;
@@ -90,4 +76,55 @@
   left: 0;
   z-index: 1;
   content: ""
+}
+#carrito {
+  background-image: url(fondo.jpg);
+  background-size: cover;
+  height: 91vh;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.item {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.imagen {
+  flex: 0 0 100px;
+  margin-right: 20px;
+}
+
+.imagen img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.detalles {
+  flex-grow: 1;
+}
+
+.nombre {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cantidad,
+.precio {
+  font-weight: bold;
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(fondo.jpg);
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #formulario {
+            background-image: url(fondo.jpg);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .text{
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            animation-name: neonEffect;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            text-shadow: 2px 2px 0px #ff198f;
+        }
+        @keyframes neonEffect {
+            0%, 35%, 45%, 65%, 100% {
+                text-shadow: 
+                white 0 0 12px,
+                red 0 0 24px,
+                red 0 0 36px,
+            }
+            40%, 60%{
+                text-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="formulario">
+    <h2 class="text">Sus comentarios aquí</h2>
+    <form action="#" method="POST">
+        <div class="campo">
+            <label for="nombre" class="text">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo">
+            <label for="email" class="text">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="campo">
+            <label for="mensaje" class="text">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+</body>
+</html>
