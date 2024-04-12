@@ -5,7 +5,24 @@
   width: 100%;
   z-index: 100;
 }
+#SL{
+  height: 65vh;
 
+}
+.SL{
+  height:100%;
+  width:25%;
+  border-style: solid;
+  border: 1px solid;
+  border-color: white;
+ 
+}
+.Nov{
+  margin-top: 10vh;
+}
+.sinop{
+  margin-top: 10vh;
+}
 #segvis{
     background-image: url(fondo.jpg);
     height: 112vh;
