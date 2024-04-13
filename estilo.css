@@ -5,6 +5,24 @@
   width: 100%;
   z-index: 100;
 }
+body{
+  background-color: black !important;
+}
+.Nov{
+  margin-top: 10vh;
+  background: black;
+  color: white;
+    font-family: 'Press Start 2P', cursive;
+    animation-name: neonEffect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-shadow: 2px 2px 0px #ff0000;
+}
+#Nov{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+}
 #SL{
   height: 65vh;
 
@@ -17,25 +35,58 @@
   border-color: white;
  
 }
-.Nov{
-  margin-top: 10vh;
+#BL{
+  height: 65vh;
+
+}
+.BL{
+  height:100%;
+  width:25%;
+  border-style: solid;
+  border: 1px solid;
+  border-color: white;
+  margin-bottom: 10vh !important;
+}
+.Biblia{
+  margin-top: 10vh !important;
+}
+#AN{
+  height: 65vh;
+
+}
+.AN{
+  height:100%;
+  width:25%;
+  border-style: solid;
+  border: 1px solid;
+  border-color: white;
+  margin-bottom: 10vh !important;
+}
+.anim{
+  margin-top: 10vh !important;
+}
+@keyframes neonEffect {
+  0%, 35%, 45%, 65%, 100% {
+      text-shadow: 
+      white 0 0 12px,
+      red 0 0 24px,
+      red 0 0 36px,
+  }
+  40%, 60%{
+      text-shadow: none;
+  }
 }
 .sinop{
   margin-top: 10vh;
 }
-#segvis{
-    background-image: url(fondo.jpg);
-    height: 112vh;
-}
+
+
+
 #tervis{
     background-image: url(fondo.jpg);
     background-size: cover;
     height: 91vh;
     color: white;
-}
-
-.card-img-top{
-  height: 70vh;
 }
 #text{
     color: white;
@@ -57,91 +108,36 @@
     }
 }
 
-
-.tarjeta{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  width:420px;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
-  font-family: sans-serif;
-}
-.titulo{
-  font-size: 24px;
-  padding: 10px 10px 0 10px;;
-}
-.cuerpo{
-  padding: 10px;
-}
-.pie{
-  background: #6699ff;
-  border-radius:0 0 15px 15px;
-  padding: 10px;
-  text-align:center;
-}
-.pie a{
-  text-decoration: none;
-  color: white;
-}
-.pie a:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: ""
-}
-#carrito {
-  background-image: url(fondo.jpg);
-  background-size: cover;
-  height: 91vh;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
 }
 
-.item {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
+.footer h5 {
+  color: #fff;
 }
 
-.imagen {
-  flex: 0 0 100px;
-  margin-right: 20px;
+.footer ul {
+  list-style: none;
+  padding: 0;
 }
 
-.imagen img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.detalles {
-  flex-grow: 1;
-}
-
-.nombre {
-  margin-top: 0;
+.footer ul li {
   margin-bottom: 10px;
 }
 
-.descripcion {
-  margin-top: 0;
-  margin-bottom: 15px;
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.cantidad,
-.precio {
-  font-weight: bold;
+.social-icons li:last-child {
+  margin-right: 0;
 }
+

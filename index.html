@@ -18,10 +18,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#segvis">Mas vendidos</a>
+                    <a class="nav-link active" aria-current="page" href="top ventas.html">Mas vendidos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="formulario.html">Reseñas </a>
+                    <a class="nav-link" href="formulario.html">Reseñas</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,11 +35,11 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#carrito">Carrito</a>
+                    <a class="nav-link" href="carrito.html">Carrito</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" list="datalistOptions" type="search" placeholder="Search" aria-label="Search">
+                  <input class="form-control me-2" list="datalistOptions" type="search" placeholder="Buscar" aria-label="Search">
                   <datalist id="datalistOptions">
                     <option value="Arse Lupin">
                     <option value="Sherlock Holmes">
@@ -47,14 +47,16 @@
                     <option value="La Divina Comedia">
                     <option value="Solo Leveling">
                   </datalist>
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
               </div>
             </div>
           </nav>
     </div>
     <div>
+      <div id="Nov">
       <H1 class="Nov">Novedades</H1>
+      </div>
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -68,7 +70,7 @@
                   <div id="SL">
                     <img class="SL"    src="car1.jpeg" alt="Solo Leveling">
                   </div>
-                  <h5 class="sinop">Sinopsis</h5>
+                  <h5 class="sinop">Solo Leveling</h5>
                   <p class="texto-banner">En un mundo en el que ciertos humanos llamados «cazadores» poseen habilidades mágicas,
                      estos deben luchar contra monstruos para proteger a la raza humana de una aniquilación segura. 
                      Un cazador muy débil llamado Sung Jinwoo se encuentra en una lucha en la que solo puede tratar de sobrevivir.</p>
@@ -77,21 +79,25 @@
               <div class="carousel-item">
                 <img src="fondo.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <div id="SL">
-                    <img class="SL"    src="car1.jpeg" alt="Solo Leveling">
+                  <div id="BL">
+                    <img class="BL"    src="biblia.png" alt="Biblia">
                   </div>
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+                  <h5 class="Biblia">La Biblia</h5>
+                  <p>Es un conjunto de libros canónicos que en el cristianismo y en otras religiones se consideran producto de inspiración 
+                    divina y un reflejo o registro de la relación entre Dios y la humanidad.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="fondo.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <div id="SL">
-                    <img class="SL"    src="car1.jpeg" alt="Solo Leveling">
+                  <div id="AN">
+                    <img class="AN"    src="animales.png" alt="Animales Fantasticos Y Donde Encontarlos">
                   </div>
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
+                  <h5 class="anim">Animales Fantasticos Y Donde Encontarlos</h5>
+                  <p>En 1926, el mago experto en zoología Newt Scamander hace una breve parada en Nueva York mientras viaja 
+                    catalogando y capturando criaturas mágicas por el mundo. Jacob, un humano corriente, 
+                    provoca por error que las criaturas escapen y se oculten por la ciudad. Scamander tendrá que atraparlas de nuevo, 
+                    antes de que causen problemas.</p>
                 </div>
               </div>
             </div>
@@ -105,100 +111,43 @@
             </button>
           </div>
         </div>
-          <div id="segvis">
-            <div>
-            <h1  id="text">Top ventas</h1>
-          </div>
-            <div class="row">
-              <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card" style="width: 18rem;">
-                  <img src="arsene.jpg" class="card-img-top" alt="Arsene Lupin">
-                  <div class="card-body">
-                    <h5 class="card-title">Arsene Lupin</h5>
-                    <!--<p class="card-text">Arsenio Lupin, caballero ladrón es una colección de cuentos y la primera obra de una serie de novelas escritas por Maurice Leblanc acerca del personaje ficticio Arsenio Lupin.</p>-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      Añadir al carro
-                    </button>
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Añadir al carrito</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Confirmar pedido
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <a class="btn btn-primary" href="#carrito">confirmar</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  </div>
-              <div class="col-sm-6">
-                <div class="card" style="width: 18rem;">
-                  <img src="sherlock.jpg" class="card-img-top" alt="Sherlock Holmes">
-                  <div class="card-body">
-                    <h5 class="card-title">Sherlock Holmes</h5>
-                    <!--<p class="card-text">Las aventuras de Sherlock Holmes es una colección de doce cuentos escritos por Arthur Conan Doyle, en los que el personaje principal es el detective de ficción Sherlock Holmes.</p>-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      Añadir al carro
-                    </button>
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Añadir al carrito</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Confirmar pedido
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <a class="btn btn-primary" href="#carrito">confirmar</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            </div>
-          </div>
+        
+        
           <div id="tervis">
             <h1>.......</h1>
 
           </div>
-          <div id="carrito">
-            <h1>Carrito de Compras</h1>
-            <div class="item">
-                <div class="imagen"><img src="arsene.jpg" alt="Arsene"></div>
-                <div class="detalles">
-                    <h3 class="nombre">Arsene</h3>
-                    <p class="descripcion">Arsenio Lupin, caballero ladrón es una colección de cuentos y la primera obra de una serie de novelas escritas por Maurice Leblanc acerca del personaje ficticio Arsenio Lupin.</p>
-                    <div class="info">
-                        <span class="cantidad">Cantidad: 1</span>
-                        <span class="precio">$10.000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="imagen"><img src="sherlock.jpg" alt="Sherlock"></div>
-                <div class="detalles">
-                    <h3 class="nombre">Sherlock</h3>
-                    <p class="descripcion">Las aventuras de Sherlock Holmes es una colección de doce cuentos escritos por Arthur Conan Doyle, en los que el personaje principal es el detective de ficción Sherlock Holmes.</p>
-                    <div class="info">
-                        <span class="cantidad">Cantidad: 2</span>
-                        <span class="precio">$20.000</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Información</h5>
+        <ul>
+          <li><a href="#">Acerca de nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Enlaces rápidos</h5>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Síguenos</h5>
+        <ul class="social-icons">
+          <li><img src="facebook.png" alt="Facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><img src="x.png" alt="X"><a href="#"><i class="fab fa-x"></i></a></li>
+          <li><img src="instagram.png" alt="Instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </html>
