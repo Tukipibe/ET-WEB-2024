@@ -4,6 +4,12 @@
   left: 0;
   width: 100%;
   z-index: 100;
+
+}
+
+.navbar{
+  background-color: #663d00 !important;
+  height: 50%;
 }
 body{
   background-color: black !important;

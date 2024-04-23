@@ -58,6 +58,7 @@
 
         textarea {
             height: 100px;
+            margin-bottom:10px ;
         }
 
         button[type="submit"] {
@@ -93,6 +94,21 @@
                 text-shadow: none;
             }
         }
+
+        .error{
+          border: 1.5px rgba(255, 0, 0, 0.614) solid !important;
+      }
+      
+      .correct{
+          border: 1.5px rgba(83, 182, 34, 0.614) solid !important;
+      }
+      
+      .text_error{
+          font-size: .9rem;
+          color: rgba(255, 0, 0, 0.614);
+          text-align: right;
+      }
+
         .footer {
             background-color: #333;
             color: #fff;
@@ -141,7 +157,7 @@
                     <a class="nav-link active" aria-current="page" href="top ventas.html">Mas vendidos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="formulario.html">Reseñas </a>
+                    <a class="nav-link" href="formulario.html">Contacto</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -175,23 +191,32 @@
     </div>
 
 <div id="formulario">
-    <h2 class="text">Sus comentarios aquí</h2>
+    <h2 class="text">Contactános</h2>
     <form action="#" method="POST">
         <div class="campo">
             <label for="nombre" class="text">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Matias Fernandez" onblur="validarFormulario_nombre()">
+            <p id="error_user" class="text_error">&nbsp;</p>
         </div>
         <div class="campo">
+          <label for="telefono" class="text">Telefono:</label>
+          <input type="text" id="telefono" name="telefono" placeholder="+569 123456789" onblur="validarFormulario_telefono()">
+          <p id="error_user" class="text_error">&nbsp;</p>
+      </div>
+        <div class="campo">
             <label for="email" class="text">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="matiasfernandez14@gmail.com" onblur="validarFormulario_email()">
+            <p id="error_user" class="text_error">&nbsp;</p>
         </div>
         <div class="campo">
             <label for="mensaje" class="text">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje" onblur="validarFormulario_mensaje()"></textarea>
+            <p id="error_user" class="text_error">&nbsp;</p>
         </div>
         <button type="submit">Enviar</button>
     </form>
 </div>
+<script src="validacion-form.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 <footer class="footer">
