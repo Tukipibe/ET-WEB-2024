@@ -16,11 +16,11 @@ function validarFormulario_telefono(evt){
     if(user.value.length >= 9){
         user.classList.add("correct");
         user.classList.remove("error");
-        document.querySelector("#error_user").innerHTML = "&nbsp;"
+        document.querySelector("#error_tel").innerHTML = "&nbsp;"
     }else{
         user.classList.remove("correct");
         user.classList.add("error");
-        document.querySelector("#error_user").innerHTML = "Error, ingrese 9 caracteres."
+        document.querySelector("#error_tel").innerHTML = "Error, ingrese 9 caracteres."
     }
 }
 function validarFormulario_email(evt){
@@ -28,11 +28,11 @@ function validarFormulario_email(evt){
     if(user.value.length >= 9){
         user.classList.add("correct");
         user.classList.remove("error");
-        document.querySelector("#error_user").innerHTML = "&nbsp;"
+        document.querySelector("#error_mail").innerHTML = "&nbsp;"
     }else{
         user.classList.remove("correct");
         user.classList.add("error");
-        document.querySelector("#error_user").innerHTML = "Error, ingrese 9 caracteres."
+        document.querySelector("#error_mail").innerHTML = "Error, ingrese 9 caracteres."
     }
 }
 
@@ -41,10 +41,10 @@ function validarFormulario_mensaje(evt){
     if(user.value.length >= 5){
         user.classList.add("correct");
         user.classList.remove("error");
-        document.querySelector("#error_user").innerHTML = "&nbsp;"
+        document.querySelector("#error_men").innerHTML = "&nbsp;"
     }else{
         user.classList.remove("correct");
         user.classList.add("error");
-        document.querySelector("#error_user").innerHTML = "Error, ingrese mas de 5 caracteres."
+        document.querySelector("#error_men").innerHTML = "Error, ingrese mas de 5 caracteres."
     }
 }
