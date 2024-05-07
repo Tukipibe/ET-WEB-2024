@@ -23,6 +23,7 @@ function validarFormulario_telefono(evt){
         document.querySelector("#error_tel").innerHTML = "Error, ingrese 9 caracteres."
     }
 }
+
 function validarFormulario_email(evt){
     let user = document.querySelector("#email");
     if(user.value.length >= 9){
@@ -36,15 +37,28 @@ function validarFormulario_email(evt){
     }
 }
 
+function validarFormulario_nacionalidad(evt){
+    let user = document.querySelector("#nacionalidad");
+    if(user.value.length >= 5){
+        user.classList.add("correct");
+        user.classList.remove("error");
+        document.querySelector("#error_nac").innerHTML = "&nbsp;"
+    }else{
+        user.classList.remove("correct");
+        user.classList.add("error");
+        document.querySelector("#error_nac").innerHTML = "Error, ingrese mas de 5 caracteres."
+    }
+}
+
 function validarFormulario_mensaje(evt){
     let user = document.querySelector("#mensaje");
-    if(user.value.length >= 5){
+    if(user.value.length >= 11){
         user.classList.add("correct");
         user.classList.remove("error");
         document.querySelector("#error_men").innerHTML = "&nbsp;"
     }else{
         user.classList.remove("correct");
         user.classList.add("error");
-        document.querySelector("#error_men").innerHTML = "Error, ingrese mas de 5 caracteres."
+        document.querySelector("#error_men").innerHTML = "Error, ingrese mas de 10 caracteres."
     }
 }
