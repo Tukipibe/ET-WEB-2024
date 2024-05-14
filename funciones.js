@@ -14,6 +14,16 @@ let items = [
         "precio":10000,
         "imagen":"sherlock.jpg"
     },
+    {
+        "nombre":"Animales Fantasticos y donde encontrarlos",
+        "precio":15000,
+        "imagen":"animales.png"
+    },
+    {
+        "nombre":"Solo leveling Vol 2.",
+        "precio":25000,
+        "imagen":"slv2.jpg"
+    }
     
 ]
 

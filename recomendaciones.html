@@ -3,82 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
+    <title>Recomendaciones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
 
-        #carrito {
+        #tervis{
             background-image: url(fondo.jpg);
             background-size: cover;
+            min-height: calc(100vh - 100px);
             color: white;
-            padding: 20px;
-            margin-top: 10vh;
-          }
-          body{
-            background-color: black;
-          }
-          #icon {
             display: flex;
-            align-items: end;
-            justify-content: flex-end;
-          }
-          .item {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            display: flex;
-          }
-          
-          .imagen {
-            flex: 0 0 100px;
-            margin-right: 20px;
-          }
-          
-          .imagen img {
-            width: 100%;
-            border-radius: 8px;
-          }
-          
-          .detalles {
-            flex-grow: 1;
-          }
-          
-          .nombre {
-            margin-top: 0;
-            margin-bottom: 10px;
-          }
-          
-          .descripcion {
-            margin-top: 0;
-            margin-bottom: 15px;
-          }
-          
-          .info {
-            display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-          }
-          
-          .cantidad,
-          .precio {
-            font-weight: bold;
-          }
-
-          #navegador {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-          }
-          .navbar{
-            background-color: #3b3834 !important;
-            height: auto;
-            padding-top: 10px;
-            padding-bottom: 10px;
-          }
-          .footer {
+            padding: 20px;
+        }
+        .sc-ti {
+          color: #fff;
+          font-size: 24px;
+        }
+        
+        .book-title,.book-author,.book-year {
+          color: #666;
+          font-size: 18px;
+        }
+        
+        .book-cover {
+          max-width: 100%;
+          height: auto;
+          margin: 20px 0;
+          border-radius: 8px;
+        }
+        
+        button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        
+        button:hover {
+          background-color: #0056b3;
+        }
+        .footer {
             background-color: #333;
             color: #fff;
             padding: 30px 0;
@@ -151,48 +121,20 @@
             </div>
           </nav>
     </div>
-    <div id="carrito">
-        <div id="icon">
-        <img src="carrito.png" alt="Carrito" height="50px" width="50px">
-      </div>
-        <div class="item">
-            <div class="imagen"><img src="arsene.jpg" alt="Arsene"></div>
-            <div class="detalles">
-                <h3 class="nombre">Arsene</h3>
-                <p class="descripcion">Arsenio Lupin, caballero ladrón es una colección de cuentos y la primera obra de una serie de novelas escritas por Maurice Leblanc acerca del personaje ficticio Arsenio Lupin.</p>
-                <div class="info">
-                    <span class="cantidad">Cantidad: 1</span>
-                    <span class="precio">$10.000</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="imagen"><img src="sherlock.jpg" alt="Sherlock"></div>
-            <div class="detalles">
-                <h3 class="nombre">Sherlock</h3>
-                <p class="descripcion">Las aventuras de Sherlock Holmes es una colección de doce cuentos escritos por Arthur Conan Doyle, en los que el personaje principal es el detective de ficción Sherlock Holmes.</p>
-                <div class="info">
-                    <span class="cantidad">Cantidad: 2</span>
-                    <span class="precio">$20.000</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="imagen"><img src="car1.jpeg" alt="Solo Leveling"></div>
-            <div class="detalles">
-                <h3 class="nombre">Solo Leveling</h3>
-                <p class="descripcion">En un mundo en el que ciertos humanos llamados «cazadores» poseen habilidades mágicas,
-                    estos deben luchar contra monstruos para proteger a la raza humana de una aniquilación segura. 
-                    Un cazador muy débil llamado Sung Jinwoo se encuentra en una lucha en la que solo puede tratar de sobrevivir.</p>
-                <div class="info">
-                    <span class="cantidad">Cantidad: 1</span>
-                    <span class="precio">$25.000</span>
-                </div>
-            </div>
-        </div>
+
+    <div id="tervis">
+        <h1 class="sc-ti">Libro Recomendado</h1>
+        <img id="book-cover" class="book-cover" src="" alt="Portada del libro" style="display:none;">
+        <p id="book-title">Presiona el botón para obtener una recomendación</p>
+        <p id="book-author"></p>
+        <p id="book-year"></p>
+        <button onclick="fetchRandomBook()">Obtener Recomendación</button>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 <footer class="footer">
     <div class="container">
       <div class="row">
@@ -222,5 +164,5 @@
         </div>
       </div>
     </div>
-  </footer>  
+  </footer>
 </html>
