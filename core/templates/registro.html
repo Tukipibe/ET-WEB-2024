@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block 'contenido' %}
+    <h1>Crear cuenta</h1>
+    <form action="" method="post" id="form-login">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Registrarse</button>
+    </form>
+{% endblock %}
