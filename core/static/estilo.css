@@ -1,287 +1,160 @@
-#navegador {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
 
-.navbar {
-  background-color: #3b3834 !important;
-  height: 50px;
-  flex-direction: row;
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  color: #fff !important;
-}
+
 
 body {
-  background-color: black !important;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
-.Nov {
-  margin-top: 7vh;
-  margin-bottom: 0;
-  background: black;
+/* Estilos del header */
+header {
+  background-color: #0288d1;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos de la sección hero */
+.hero {
+  background-color: #4caf50;
   color: white;
-  font-family: 'Press Start 2P', cursive;
-  animation-name: neonEffect;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  text-shadow: 2px 2px 0px #ff0000;
+  padding: 100px 0;
+  text-align: center;
 }
 
-#Nov {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center;
+.hero-content h2 {
+  font-size: 2.5rem;
 }
 
-#SL {
-  height: 65vh;
+.hero-content p {
+  margin: 20px 0;
 }
 
-.SL {
-  height: 100%;
-  width: 25%;
-  border-style: solid;
-  border: 1px solid;
-  border-color: white;
+.btn {
+  background-color: #fff;
+  color: #4caf50;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-#BL {
-  height: 65vh;
+.btn:hover {
+  background-color: #0288d1;
+  color: #fff;
 }
 
-.BL {
-  height: 100%;
-  width: 25%;
-  border-style: solid;
-  border: 1px solid;
-  border-color: white;
-  margin-bottom: 5vh !important;
+/* Estilos de la sección about */
+.about {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
 }
 
-#AN {
-  height: 65vh;
+.about h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
-.AN {
-  height: 100%;
-  width: 25%;
-  border-style: solid;
-  border: 1px solid;
-  border-color: white;
-  margin-bottom: 5vh !important;
+.about p {
+  font-size: 1.2rem;
 }
 
-@keyframes neonEffect {
-  0%, 35%, 45%, 65%, 100% {
-    text-shadow: white 0 0 1rem, yellow 0 0 2rem, yellow 0 0 3rem;
-  }
-  40%, 60% {
-    text-shadow: none;
-  }
+/* Estilos de la sección projects */
+.projects {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
 }
 
-.sinop {
-  margin-top: 5vh;
-  min-width: 200px;
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.texto-banner {
-  min-width: 10vh !important;
-  flex-direction: column;
+.project-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-#text {
-  color: white;
-  font-family: 'Press Start 2P', cursive;
-  animation-name: neonEffect;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  text-shadow: 2px 2px 0px #ff198f;
+.project-item {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.footer {
+.project-item h3 {
+  margin-bottom: 10px;
+  color: #0288d1;
+}
+
+/* Estilos del footer */
+footer {
   background-color: #333;
   color: #fff;
-  padding: 2rem 0;
+  padding: 40px 0;
+  text-align: center;
 }
 
-.footer h5 {
-  color: #fff;
+footer h2 {
+  margin-bottom: 20px;
 }
 
-.footer ul {
+footer p {
+  margin: 10px 0;
+}
+
+.social-links {
   list-style: none;
   padding: 0;
 }
 
-.footer ul li {
-  margin-bottom: 1rem;
+.social-links li {
+  display: inline;
+  margin: 0 10px;
 }
 
-.footer ul li a {
+.social-links a {
   color: #fff;
   text-decoration: none;
 }
 
-.social-icons li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-.social-icons li:last-child {
-  margin-right: 0;
-}
-
-/*LOGIN*/
-#form-login{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  row-gap: 2vh;
-  margin: 6vh 0px;
-}
-#form-login>div{
-  width: 60%;
-  display: flex;
-}
-
-div>label,div>input{
-  width: 50% !important;
-  display: block;
-}
-#contenido{
-  color: #fff;
-}
-
-div>input{
-  height: 2rem;
-  border: 1px #000000 solid;
-  border-radius: 5px;
-  outline: none;
-  padding: 0px 10px;
-}
-#form-login>button{
-  width: 60%;
-  color: #000000;
-  background-color: #F8C14E;
-}
-.errorlist{
-  color: chocolate;
-  margin: 0;
-}
-.btn-logout{
-  color: #000000 !important;
-  display: flex !important;
-  transition-duration: .2s;
-  text-decoration: none;
-  padding: 0px;
-  background-color: transparent;
-  border-bottom: 3px transparent solid;
-  right: 10vh !important;
-}
-#btn-logout{
-  display: flex !important;
-  left: 10vh !important;
-}
-
-#catalogo{
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 6vh 5%;
-  align-items: center;
-  justify-content: center;
-}
-
-table{
-  border: 1px white solid;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th{
-  border: 1px white solid;
-}
-
-td{
-  color: white;
-  text-align: center;
-}
-
-th{
-  background-color: #F8C14E;
-  color: #262626;
-  
-}
-
-thead{
-  text-align: center;
-}
-
-td>img{
-  height: 50vh;
-  margin-bottom: 10px;
-}
-
-.car{
-  height: 5vh;
-  width: 5vh;
-}
-
-.comprar{
-  width: 95%;
-  display: flex;
-  justify-content: flex-end;
-}
-.comprar> a{
-  line-height: 50px;
-  background-color: #F8C14E;
-  color: #000000;
-  width: 200px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.comprar> a:hover{
-  background-color: #ff198f;
-}
-
-.login{
-  display: flex;
-  justify-content: center;
-  margin-right: 10px;
-}
-.login> a{
-  line-height: 30px;
-  background-color: #F8C14E;
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
-}
-
-.login> a:hover{
-  background-color: #ff198f;
-}
-
-.registro{
-  display: flex;
-  justify-content: center;
-  margin-right: 10px;
-}
-.registro> a{
-  line-height: 30px;
-  background-color: #F8C14E;
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
-}
-
-.registro> a:hover{
-  background-color: #ff198f;
+.social-links a:hover {
+  text-decoration: underline;
 }
