@@ -10,17 +10,50 @@
 </head>
 <body>
   <header>
-    <nav>
-        <div class="logo">
-            <h1>ONG Ejemplo</h1>
+    <div class="navBar">
+        <div class="contLogo">
+            <div class="logo"></div>
+            ONG
         </div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+
+        <div class="contBtnNav">
+            <div>
+                <a href="">Inicio</a>
+            </div>
+            <div>
+                <a href="">Nosotros</a>
+            </div>
+            <div>
+                <a href="">Proyectos</a>
+            </div>
+            <div>
+                <a href="">Contactos</a>
+            </div>
+            {% if user.is_authenticated %}
+            
+            <div class="usuario">{{ user.username }}</div>
+            <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" id="btn-logout">Salir</button>
+            </form>
+            {% else %}
+                <div class="login">
+                    <a href="{% url 'login' %}" class="login">Login</a>
+                </div>
+
+                <div class="registro">
+                    <a href="{% url 'registro' %}" class="registro">Registro</a>
+                </div>
+
+            
+            
+            {% endif %}
+
+        </div>
+            
+        
+
+    </div>
 </header>
 
 <section id="inicio" class="hero">
