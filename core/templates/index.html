@@ -18,7 +18,7 @@
 
         <div class="contBtnNav">
             <div>
-                <a href="">Inicio</a>
+                <a href="{% url 'inicio' %}">Inicio</a>
             </div>
             <div>
                 <a href="">Nosotros</a>
@@ -63,6 +63,10 @@
         <a href="#nosotros" class="btn">Conócenos</a>
     </div>
 </section>
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
 
 <section id="nosotros" class="about">
     <h2>¿Quiénes somos?</h2>

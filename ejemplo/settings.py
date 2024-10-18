@@ -124,3 +124,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'home'
+EDAMAM_APP_ID = '93406410'
+EDAMAM_APP_KEY = '809f22c485ca13a902da28edbc3160b8'
