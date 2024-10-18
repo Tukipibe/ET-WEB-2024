@@ -18,16 +18,16 @@
 
         <div class="contBtnNav">
             <div>
-                <a href="{% url 'inicio' %}">Inicio</a>
+                <a href="{% url 'home' %}">Inicio</a>
             </div>
             <div>
-                <a href="">Nosotros</a>
+                <a href="{% url 'nosotros' %}">Nosotros</a>
             </div>
             <div>
-                <a href="">Proyectos</a>
+                <a href="{% url 'proyectos' %}">Proyectos</a>
             </div>
             <div>
-                <a href="">Contactos</a>
+                <a href="{% url 'contactos' %}">Contactos</a>
             </div>
             {% if user.is_authenticated %}
             
@@ -56,51 +56,24 @@
     </div>
 </header>
 
-<section id="inicio" class="hero">
-    <div class="hero-content">
-        <h2>Cambiando el mundo, un paso a la vez</h2>
-        <p>Nuestra misión es mejorar la vida de las personas a través de proyectos sociales sostenibles.</p>
-        <a href="#nosotros" class="btn">Conócenos</a>
-    </div>
-</section>
-<div class="content">
     {% block content %}
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Cambiando el mundo, un paso a la vez</h2>
+            <p>Nuestra misión es mejorar la vida de las personas a través de proyectos sociales sostenibles.</p>
+            <a href="#nosotros" class="btn">Conócenos</a>
+        </div>
+    </section>
+    <div class="content">
     {% endblock %}
 </div>
 
-<section id="nosotros" class="about">
-    <h2>¿Quiénes somos?</h2>
-    <p>Somos una organización no gubernamental dedicada a mejorar las condiciones de vida de las comunidades más vulnerables.</p>
-</section>
 
-<section id="proyectos" class="projects">
-    <h2>Nuestros Proyectos</h2>
-    <div class="project-list">
-        <div class="project-item">
-            <h3>Proyecto 1</h3>
-            <p>Descripción del proyecto 1.</p>
-        </div>
-        <div class="project-item">
-            <h3>Proyecto 2</h3>
-            <p>Descripción del proyecto 2.</p>
-        </div>
-        <div class="project-item">
-            <h3>Proyecto 3</h3>
-            <p>Descripción del proyecto 3.</p>
-        </div>
-    </div>
-</section>
 
-<footer id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: contacto@ong-ejemplo.org</p>
-    <p>Teléfono: +123 456 7890</p>
-    <p>Síguenos en nuestras redes sociales:</p>
-    <ul class="social-links">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-    </ul>
+
+
+<footer id="footer">
+    
 </footer>
 
 </html>

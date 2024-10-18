@@ -28,12 +28,13 @@ def login(request):
 def logout(request):
     return render(request,login_url='login')
 
+
 def registro(request):
     if request.method == "POST":
         registro = Registro(request.POST)
         if registro.is_valid():
             registro.save()
-            return redirect(to="login")
+            return redirect(to="login.html")
         else:
             registro = Registro()
         return render(request, 'registro.html',{'form':registro})

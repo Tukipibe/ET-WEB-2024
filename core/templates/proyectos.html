@@ -1,6 +1,33 @@
 {% extends 'index.html' %}
 {% load static %}
-{% comment %} convertir en " " {% endcomment %}
-{% block 'contenido' %}
 
+{% block content %}
+
+<section id="proyectos" class="hero projects">
+
+    <h2>Nuestros Proyectos</h2>
+
+    <hr class="hr">
+
+    <div class="project-list">
+
+        <div class="project-item item1">
+            <a href="{% url 'inicio' %}">
+            <h3>Calculadora H.D.C</h3>
+            <p>Una calculadora que te permite ver la informacion de aquello que consumes.</p>
+            </a>
+        </div>
+
+        <div class="project-item item2">
+            <h3>Proximamente...</h3>
+            <p>Proyecto futuro. Proximamente...</p>
+        </div>
+
+        <div class="project-item item3">
+            <h3>Proximamente...</h3>
+            <p>Proyecto futuro. Proximamente...</p>
+        </div>
+
+    </div>
+</section>
 {% endblock %}

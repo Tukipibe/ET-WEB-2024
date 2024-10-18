@@ -51,7 +51,7 @@ header {
     width: 90%;
 }
 div a{
-    text-decoration: none;
+  text-decoration: none;
   font-weight: bold;
   color: #fff;
 }
@@ -78,9 +78,10 @@ div a{
 
 /* Estilos de la sección hero */
 .hero {
+
   background-color: #111b26;
   color: white;
-  padding: 100px 0;
+  padding: 5vh 0;
   text-align: center;
 }
 
@@ -111,7 +112,7 @@ div a{
   max-width: 800px;
   margin: 50px auto;
   text-align: center;
-  padding: 20px;
+  padding: 5vw 20px 0px 20px;
 }
 
 .about h2 {
@@ -141,13 +142,40 @@ div a{
 }
 
 .project-item {
-  background-color: #fff;
+  display: flex;
+  background-color: #111b26;
+  outline: 1px solid white;
+  outline-offset: 5px;
+  border: 3px solid white;
   padding: 20px;
   margin: 10px;
   width: 30%;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 35vh;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 20px 10px rgb(255 255 255 / 10%);
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.hr{
+    
+    margin: 1rem 0;
+    margin-bottom: 5vw;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    box-shadow: 0px 10px 20px 5px rgb(255 255 255 / 87%);
+  
+}
+.item1{
+  color: #85d4ff;
+  background-image: url('/static/CalculadoraHC.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .project-item h3 {
@@ -171,21 +199,40 @@ footer p {
   margin: 10px 0;
 }
 
-.social-links {
-  list-style: none;
-  padding: 0;
+
+.contactosCont{
+  padding-top: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vw;
 }
 
-.social-links li {
-  display: inline;
-  margin: 0 10px;
+.ContRedsocial{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 20vw;
+  align-items: center;
 }
 
-.social-links a {
-  color: #fff;
-  text-decoration: none;
+.contacto{
+  display: flex;
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+  border-radius: 2.5rem;
+  width: 50vw;
+  height: 6vh;
+  align-items: center;
+  background-color: #0288d1;
+  justify-content: center;
+  box-shadow: 0px 0px 20px 18px #ffffff8a;
 }
 
-.social-links a:hover {
-  text-decoration: underline;
+.redsocial{
+  width: 110px;
+  height: 100px;
+  border-radius: 50%;
 }

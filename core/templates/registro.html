@@ -1,8 +1,8 @@
 {% extends 'index.html' %}
 
-{% block 'contenido' %}
+{% block content %}
     <h1>Crear cuenta</h1>
-    <form action="" method="post" id="form-login">
+    <form action="" method="POST" id="form-login">
         {% csrf_token %}
         {{form}}
         <button type="submit">Registrarse</button>

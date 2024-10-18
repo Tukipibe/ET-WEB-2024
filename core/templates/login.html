@@ -1,10 +1,12 @@
 {% extends 'index.html' %}
 
-{% block 'contenido' %}
+{% block content %}
+<section class="hero">
     <h1>Login</h1>
     <form action="" method="post" id="form-login">
         {% csrf_token %}
         {{form}}
         <button type="submit">Login</button>
     </form>
+</section>
 {% endblock %}

@@ -1,8 +1,26 @@
 {% extends 'index.html' %}
 {% load static %}
-{% comment %} "informacion adicional ong" {% endcomment %}
-{% block 'contenido' %}
+
+{% block content %}
+<section class="hero">
+
+    <h1>Contactos</h1>
+
+    <hr class="hr">
+
+    <div class="contactosCont">
+        
+        <div class="contacto">Email: contacto@ong-ejemplo.org </div>
+        <div class="contacto">Telefono: +123 456 7890</div>
+        
+        <div class="ContRedsocial">
+            <div class="contacto redsocial">Facebook</div>
+            <div class="contacto redsocial">Twitter</div>
+            <div class="contacto redsocial">Instagram</div>
+        </div>
+        
+    </div>
+</section>
 
 {% endblock %}
 
-</html>
