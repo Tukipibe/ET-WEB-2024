@@ -4,6 +4,9 @@
 /* #5094c7 */
 
 body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: white !important;
@@ -78,7 +81,7 @@ div a{
 
 /* Estilos de la sección hero */
 .hero {
-
+  height: 100VH;
   background-color: #111b26;
   color: white;
   padding: 5vh 0;
@@ -185,10 +188,15 @@ div a{
 
 /* Estilos del footer */
 footer {
+  display: flex;
+  gap: 5vh;
   background-color: #333;
   color: #fff;
   padding: 40px 0;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 footer h2 {
@@ -201,38 +209,185 @@ footer p {
 
 
 .contactosCont{
-  padding-top: 5vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 5vw;
+  align-items: center;
+  row-gap: 4vh;
 }
 
 .ContRedsocial{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   width: 100%;
-  height: 20vw;
-  align-items: center;
-}
-
-.contacto{
   display: flex;
-  outline: 2px solid #fff;
-  outline-offset: 5px;
-  border-radius: 2.5rem;
-  width: 50vw;
-  height: 6vh;
-  align-items: center;
-  background-color: #0288d1;
+  gap: 10vw;
   justify-content: center;
-  box-shadow: 0px 0px 20px 18px #ffffff8a;
+  flex-direction: row;
 }
 
-.redsocial{
-  width: 110px;
-  height: 100px;
-  border-radius: 50%;
+footer h1{
+  font-size: 4vh;
 }
+
+
+.calculator-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.calculator-container h2{
+  color: #000000;
+}
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  resize: none;
+}
+
+.btn-analyze {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.result-section {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 1px solid #000000;
+  text-align: left;
+}
+
+
+
+/* Contenedor principal del registro */
+.register-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f8f8; /* Fondo del formulario */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra alrededor */
+  text-align: center;
+}
+
+/* Título */
+.register-container h1 {
+  color: #000000; /* Color del título */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Grupo de formulario */
+.form-group p {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Etiquetas */
+.register-container label {
+  color: #000000; /* Color de las etiquetas */
+  font-weight: bold;
+}
+
+/* Entradas */
+.register-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Botón de registro */
+.register-btn {
+  background-color: #007bff; /* Fondo del botón */
+  color: #ffffff; /* Color del texto del botón */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+.form-group li{
+  color: #000000;
+  font-size: 2vh;
+}
+span{
+  color: #000000;
+  font-size: 2vh;
+}
+
+/* Estilos del formulario de Login */
+
+.login-hero {
+  min-height: 60vh;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9f9fb; /* Fondo claro */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #000000; /* Color del texto */
+  text-align: center;
+}
+
+.login-hero h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000000; /* Color del texto */
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  background-color: #007bff; /* Color del botón */
+  color: #ffffff;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+

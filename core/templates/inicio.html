@@ -1,37 +1,35 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<form id="recipeForm" method="POST">
-    {% csrf_token %}
-    <label for="ingredients">Introduce los ingredientes (uno por línea):</label><br>
-    <textarea name="ingredients[]" id="ingredients" rows="5" cols="30"></textarea><br>
-    <button type="submit">Analizar Receta</button>
-</form>
-
-<div id="result"></div>
+<div class="calculator-container">
+    <h2>Calculadora de Huella de Carbono de Alimentos</h2>
+    <form id="recipeForm" method="POST">
+        {% csrf_token %}
+        <label for="ingredients">Introduce los ingredientes (uno por línea):</label>
+        <textarea name="ingredients[]" id="ingredients" rows="5" cols="30" placeholder="Ejemplo: Manzanas, Arroz, Leche..."></textarea>
+        <button type="submit" class="btn-analyze">Analizar Receta</button>
+    </form>
+    <div id="result" class="result-section"></div>
+</div>
 
 <script>
 document.getElementById('recipeForm').onsubmit = function(event) {
     event.preventDefault();
-    var form = new FormData(this);
-    
+    const form = new FormData(this);
+
     fetch("{% url 'analyze_recipe' %}", {
         method: 'POST',
         body: form,
-        headers: {
-            'X-CSRFToken': '{{ csrf_token }}'
-        }
+        headers: { 'X-CSRFToken': '{{ csrf_token }}' }
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Verificar la respuesta aquí
-
-        // Comprobar si los datos existen antes de acceder a ellos
+        const resultDiv = document.getElementById('result');
+        
         if (!data || !data.ingredients) {
             throw new Error('Los datos de la receta no están disponibles.');
         }
 
-        const resultDiv = document.getElementById('result');
         resultDiv.innerHTML = `
             <h3>Resultado del Análisis</h3>
             <p><strong>Calorías:</strong> ${data.calories}</p>
@@ -43,7 +41,6 @@ document.getElementById('recipeForm').onsubmit = function(event) {
         `;
     })
     .catch(error => {
-        console.error('Error:', error);
         document.getElementById('result').innerText = 'Ocurrió un error al analizar la receta. Inténtalo de nuevo.';
     });
 };

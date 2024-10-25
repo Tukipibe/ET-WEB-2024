@@ -26,9 +26,6 @@
             <div>
                 <a href="{% url 'proyectos' %}">Proyectos</a>
             </div>
-            <div>
-                <a href="{% url 'contactos' %}">Contactos</a>
-            </div>
             {% if user.is_authenticated %}
             
             <div class="usuario">{{ user.username }}</div>
@@ -73,7 +70,22 @@
 
 
 <footer id="footer">
-    
+
+
+        <h1>Contactos</h1>
+        <div class="contactosCont">
+            
+            <div class="contacto">Email: contacto@ong-ejemplo.org </div>
+            <div class="contacto">Telefono: +123 456 7890</div>
+            
+            <div class="ContRedsocial">
+                <div class="contacto ">Facebook</div>
+                <div class="contacto ">Twitter</div>
+                <div class="contacto ">Instagram</div>
+            </div>
+            
+        </div>
+
 </footer>
 
 </html>

@@ -6,6 +6,9 @@ from django.contrib.auth.views import logout_then_login
 from .forms import *
 from django.conf import settings
 from django.http import JsonResponse
+from django.contrib.auth import logout as django_logout
+from django.shortcuts import redirect
+from django.contrib.auth.forms import UserCreationForm
 
 def home(request):
     return render(request,'index.html')
@@ -26,18 +29,19 @@ def login(request):
     return render(request,'login.html')
 
 def logout(request):
-    return render(request,login_url='login')
-
-
+    django_logout(request)
+    return redirect('login')  # Redirige al usuario a la página de inicio de sesión
+    
 def registro(request):
-    if request.method == "POST":
-        registro = Registro(request.POST)
-        if registro.is_valid():
-            registro.save()
-            return redirect(to="login.html")
-        else:
-            registro = Registro()
-        return render(request, 'registro.html',{'form':registro})
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')  # Redirige a login después del registro exitoso
+    else:
+        form = UserCreationForm()
+    
+    return render(request, 'registro.html', {'form': form})
     
 def analyze_recipe(request):
      if request.method == 'POST':

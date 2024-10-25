@@ -1,12 +1,14 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<section class="hero">
-    <h1>Login</h1>
+<section class="login-hero">
+    <h1>Iniciar sesión</h1>
     <form action="" method="post" id="form-login">
         {% csrf_token %}
-        {{form}}
-        <button type="submit">Login</button>
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="login-btn">Login</button>
     </form>
 </section>
 {% endblock %}

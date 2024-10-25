@@ -1,10 +1,13 @@
 {% extends 'index.html' %}
-
 {% block content %}
+<div class="register-container">
     <h1>Crear cuenta</h1>
-    <form action="" method="POST" id="form-login">
+    <form action="" method="POST">
         {% csrf_token %}
-        {{form}}
-        <button type="submit">Registrarse</button>
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="register-btn">Registrarse</button>
     </form>
+</div>
 {% endblock %}
