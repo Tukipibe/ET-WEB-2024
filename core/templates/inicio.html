@@ -6,7 +6,7 @@
     <form id="recipeForm" method="POST">
         {% csrf_token %}
         <label for="ingredients">Introduce los ingredientes (uno por línea):</label>
-        <textarea name="ingredients[]" id="ingredients" rows="5" cols="30" placeholder="Ejemplo: Manzanas, Arroz, Leche..."></textarea>
+        <textarea name="ingredients[]" id="ingredients" rows="5" cols="30" placeholder="Ingrese sus alimentos como es solicitado aqui..."></textarea>
         <button type="submit" class="btn-analyze">Analizar Receta</button>
     </form>
     <div id="result" class="result-section"></div>
