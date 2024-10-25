@@ -3,13 +3,30 @@
 /* #111b26 */
 /* #5094c7 */
 
+/* Color pagina huella */
+.huella{
+    text-align: center;
+    row-gap: 1vh;
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    padding: 5vh;
+    color: white !important;
+    flex-direction: column;
+    align-items: center;
+}
+/* Color Nombre Usuario */
+.usuario{
+  color: white;
+}
+
 body {
   display: flex;
   flex-direction: column;
   row-gap: 5vh;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: white !important;
+  color: white;
   background: #111b26 !important;
 }
 
@@ -31,6 +48,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   font-size: 3vw;
+  color: white;
 }
 .logo{
   background: url('/static/LogoTuki.png');
@@ -86,6 +104,7 @@ div a{
   color: white;
   padding: 5vh 0;
   text-align: center;
+  padding: 5vh;
 }
 
 .hero-content h2 {
@@ -153,7 +172,7 @@ div a{
   padding: 20px;
   margin: 10px;
   width: 30%;
-  height: 35vh;
+  height: 50vh;
   border-radius: 2.5rem;
   box-shadow: 0 0 20px 10px rgb(255 255 255 / 10%);
   text-align: center;
@@ -391,3 +410,58 @@ span{
   background-color: #0056b3;
 }
 
+/**/
+.sectRegister{
+  padding: 5vw;
+}
+
+@media only screen and (max-width: 500px) {
+  *{
+   font-size: 1.5vh;
+  }
+  .logo{
+   display: none;
+  }
+  .contLogo{
+   font-size: 4vh;
+  }
+  .btn{
+   font-size: 3vh !important;
+  }
+  .contBtnNav{
+   justify-content: center;
+   gap: 5vw;
+  }
+  .nosotros,.registro{
+   display: none;
+   box-sizing: 0px;
+ } 
+ .project-item{
+   width: 44%;
+ }
+ }
+ @media only screen and (max-width: 760px) {
+   *{
+    font-size: 3.5vh;
+   }
+   .logo{
+    display: none;
+   }
+   .contLogo{
+    font-size: 4vh;
+   }
+   .btn{
+    font-size: 3vh !important;
+   }
+   .contBtnNav{
+    justify-content: center;
+    gap: 5vw;
+   }
+   .nosotros,.registro{
+    display: none;
+    box-sizing: 0px;
+  } 
+  .project-item{
+    width: 44%;
+  }
+  }

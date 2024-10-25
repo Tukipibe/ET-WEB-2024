@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+<body>
+    <div class="huella">
+    <h1>Consulta la Huella de Carbono de un Alimento</h1>
+
+    <label for="alimento">Nombre del Alimento:</label>
+    <input type="text" id="alimento" placeholder="Ejemplo: carne de res">
+    <button onclick="consultarHuellaCarbono()">Consultar</button>
+
+    <h2>Resultado:</h2>
+    <pre id="resultado"></pre>
+
+    <script>
+        function consultarHuellaCarbono() {
+            const alimento = document.getElementById('alimento').value;
+            const url = `/api/huella_carbono/?alimento=${encodeURIComponent(alimento)}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const resultado = document.getElementById('resultado');
+                    resultado.textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error al consultar la API:', error);
+                });
+        }
+    </script>
+    </div>
+</body>
+{% endblock %}

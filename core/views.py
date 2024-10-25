@@ -9,6 +9,9 @@ from django.http import JsonResponse
 from django.contrib.auth import logout as django_logout
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .data import carbon_footprint_data
 
 def home(request):
     return render(request,'index.html')
@@ -73,3 +76,20 @@ def analyze_recipe(request):
             return JsonResponse({'error': 'No se pudo analizar la receta.'}, status=400)
      else:
         return JsonResponse({'error': 'Método no permitido.'}, status=405)
+     
+@api_view(['GET'])
+def huella_carbono(request):
+    alimento = request.query_params.get('alimento', '').lower()
+    if alimento in carbon_footprint_data:
+        response = {
+            "alimento": alimento,
+            "huella_carbono_kg_co2e": carbon_footprint_data[alimento]
+        }
+    else:
+        response = {
+            "error": "El alimento especificado no está en la base de datos"
+        }
+    return Response(response)
+
+def huella(request):
+    return render(request, 'huella.html')
